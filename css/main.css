@@ -70,7 +70,58 @@ section.motto img{
     padding-top: 20px;
 }
 
-@media only screen and (max-width: 450px){
+aside.sideBar{
+    min-height: 100vh;
+    position: absolute;
+    width: 300px;
+    background-image: linear-gradient(to bottom,  rgb(134, 224, 179), rgb(101, 128, 101));
+    top: 0;
+    display: none;
+    right: 0;
+}
+.side-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    gap: 3em;
+     flex-direction: column;
+    
+    
+    height: 100vh;
+}
+
+
+#sidelinks.toggle{
+   display: inline-block;
+}
+#sidelinks.hide{
+    transform: translateX(300px);
+    transition: 100ms;
+}
+
+.cancel{
+    width: 30px;
+    position: absolute;
+    right: 40px;
+    margin-top: 20px;
+    
+}
+
+.cancel:hover{
+    transform: scale(1.2,1.2);
+}
+
+
+.side-menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+ 
+  
+}
+
+@media only screen and (max-width: 650px){
     
     
     .navigation .navBar img{

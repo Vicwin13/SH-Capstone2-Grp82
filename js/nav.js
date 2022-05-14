@@ -1,10 +1,10 @@
-let hamburger = document.getElementById("hamburger");
-let navLinks = document.getElementById("links");
+let side = document.getElementById('sidelinks');
 
 
+function openblk(){
+    side.classList.toggle('toggle');
+}
 
-hamburger.addEventListener('click', () => {
- console.log("my name is Victor") ;
-
- navLinks.classList.toggle('toggle')
-})
+function closeblk(){
+    side.classList.toggle('hide');
+}
