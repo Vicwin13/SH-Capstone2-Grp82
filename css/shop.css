@@ -1,0 +1,240 @@
+body{
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    background-image:linear-gradient(to right bottom,rgba(65, 108, 72, 0.9),rgba(79, 97, 42, 0.9)),url(../images/blue-bmw.png);
+    background-size:cover;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    color: white;
+}
+
+.header p{
+    font-style: italic;
+}
+
+.btn {
+		text-decoration:none;
+		text-transform:uppercase;
+		padding:1rem 3rem;
+		border-radius: 5rem;
+		font-size: 1rem;
+		position:relative;
+		border:2px solid #846c38;
+		display:inline-block;
+		transition:all .2s;
+        background-color: #846c38;
+        color: #fff;
+	}
+
+.btn:hover {
+		outline:none;
+		transform:translateY(-3px);
+		box-shadow:0 1rem 2rem  rgba(14, 13, 13, .5);
+	}
+
+.article{
+    background-color: #e8e8e8;
+    justify-content: space-between;
+}
+
+.right{
+    width: 55%;
+    justify-content: center;
+    align-items: center;
+}
+
+    .left{
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    h1, h2 {
+        font-size:3rem;
+        text-transform:uppercase;
+        font-weight:700;
+        background-image:linear-gradient(to right,#416c48ff,#ffb900);
+        -webkit-background-clip: text;
+        color:transparent;
+        transition:all 1s;
+    }
+
+    h2{
+        font-weight: 600;
+        font-size: 25px;
+    }
+    
+h1:hover, h2:hover {
+            transform:skewY(2deg) skewX(15deg);
+            text-shadow:.5rem  2rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btns {
+    color: #846c38;
+	text-decoration:none;
+	text-transform:uppercase;
+	border-bottom:1px solid #846c38;
+    border-radius: 10px;
+	padding:1rem 3rem;
+	font-size: 1rem;
+	transition:all .2s;
+	}
+
+.shop{
+    margin-top: 10px;
+    margin-bottom: 2em;
+}
+
+	
+.btns:hover {
+		background-color: #846c38;
+		color: white;
+		box-shadow:0 1rem 2rem rgba(0, 0, 0, .5);
+		transform:translateY(-3px);
+	}
+
+.right img {
+    transition:all .8s ease-in-out;
+}
+
+.right img:hover {
+    transform:rotateY(-180deg);
+}
+
+.plan {
+    width: 30%;
+	height: 20rem;
+	color: white;
+	perspective:150rem;
+	position:relative;
+    margin-top: 2em;
+    padding-bottom: 2em;
+}
+
+.plan__side {
+    position:absolute;
+    left:0;
+    top:0;
+    backface-visibility:hidden;
+    height:100%;
+    width:100%;
+    transition:all .9s;  
+    box-shadow: 0 1.5rem 4rem rgba(15, 15, 15,.15);   
+    overflow:hidden;
+}
+
+.plan__side--front {
+    background-color: white;
+    border-radius: 30px 0 30px 0;
+}
+
+
+.plan__side--back {
+    background-color: #416c48ff;
+    transform:rotateY(180deg);
+    border-radius: 0 30px 0 30px; 
+ }
+
+.plan:hover  .plan__side--front{
+    transform:rotateY(-180deg); 
+}
+
+.plan:hover  .plan__side--back {
+    transform:rotateY(0);
+}
+
+.plan__image {	
+    height:18rem;
+    background-size:cover;
+    background-blend-mode:overlay; 
+    clip-path:polygon(0 0,100% 0, 100% 80%, 0 100%);
+}
+
+.plan__heading {
+    color: white;
+    font-weight:400;
+    font-size:2rem;
+    text-transform:uppercase;
+    position:absolute;
+    top:9rem;
+    right:2rem;
+    width:20rem;
+    text-align:right;
+    padding:1rem 1.5rem;
+    background-image:linear-gradient(to right bottom, rgba(187, 212, 235,.7), rgba(112, 127, 141,.7));
+}
+
+.plan__bullets {
+        color: #333;
+        list-style:none;
+        width:90%;
+        font-weight: 800;
+        margin:0 auto;
+        text-align:center;
+        font-size:1.3rem;
+}
+
+.main{
+    background-color: #e8e8e8;
+    width:100%;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.plan__button {
+    position:absolute;
+    top:10%;
+    justify-content: center;
+    width:90%;
+    text-align:center;
+}
+
+.plan__cost-box {
+    color: white;
+}
+
+.plan__cost-value {
+    font-size:4rem;
+    font-weight:100;
+}
+@media screen and (max-width: 480px) {
+
+    .plan{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+    
+}
+
+@media screen and (min-width: 485px) and (max-width: 750px) {
+
+    .plan{
+        width: 47%;
+    }
+    
+}
+
+@media screen and (max-width: 575px) {
+
+    .right{
+        width: 100%;
+    }
+    
+}
