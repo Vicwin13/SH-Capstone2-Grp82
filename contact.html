@@ -30,30 +30,35 @@
         </nav>
 
     </header>
+
 <div class="body" style="margin: 30px auto;  width: fit-content; padding: 15px; outline: 2px solid rgb(211, 211, 192); border-radius: 20px;">
- <form class="main-form " style="width: 400px; ">
+ 
+  <form class="main-form " style="width: 400px; ">
+
     <div class="form-group">
-      <label for="exampleInputUsername" class="form-label">Username</label>
-      <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp">
-      <div id="UsernameHelp" class="form-text"></div>
+      <label for="exampleInputUsername" class="form-label">Full name</label>
+      <input type="text" class="form-control" id="Username" onkeyup="validateName()" aria-describedby="usernameHelp">
+      <div id="UsernameHelp" class="form-text"> </div>
     </div>
     
   <div class="form-group">
       <label for="exampleInputEmail" class="form-label">Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+      <input type="email" class="form-control" id="Email" onkeyup="validateEmail()" aria-describedby="emailHelp">
       <div id="emailHelp" class="form-text"></div>
     </div>
    
   <div class="mb-3">
       <label for="exampleInputNumber" class="form-label">Phone number</label>
-      <input type="number" class="form-control" id="exampleInputNumber" aria-describedby="numberHelp">
+      <input type="number" class="form-control" id="Number" onkeyup="validatePhone()" aria-describedby="numberHelp">
       <div id="numberHelp" class="form-text"></div>
     </div>
     
   <div class="form-group">
       <label for="inputPassword5" class="form-label ">Password</label>
-    <div class="d-flex justify-content-start gap-2">  <input type="password" placeholder= "" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+    <div class="d-flex justify-content-start gap-2">  <input type="password" placeholder= "" id="Password" class="form-control" aria-describedby="passwordHelpBlock">
       <i class="bi bi-eye-slash"></i>
+      <div id="passwordHelp" class="form-text"></div>
+
     </div>
   </div>
       <div id="passwordHelpBlock" class="form-text">
@@ -62,9 +67,10 @@
    
   <div class="form-group">
       <label for="inputConfirm password5" class="form-label">Confirm password</label>
-      <div class="d-flex justify-content-start gap-2">  <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+      <div class="d-flex justify-content-start gap-2">  <input type="password" id="Password2" class="form-control" aria-describedby="passwordHelpBlock">
     <div id="passwordHelpBlock" class="form-text">
       <i class="bi bi-eye-slash"></i> </div>
+      <div id="password2Help" class="form-text"></div>
 
     </div>
   
@@ -77,14 +83,17 @@
       <label class="form-check-label" for="customRadio2">Female</label>
   </div>
   
-   
-  <button style="padding: 5px 10px 5px 10px; background-color: white; color: black; transform: none; box-shadow: none; " type="submit" class="btn btn-primary">Submit</button>
+   <div onclick="return checkPassword()">Click me</div>
+  <button style="padding: 5px 10px 5px 10px; background-color: white; color: black; transform: none; box-shadow: none; " id="submit" onclick="return validateForm()" type="submit" class="btn btn-primary">Submit</button>
+  <div id="submitHelp"></div>
+
   </form>
 </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js" ></script>
-
+  <script src="/js/nav.js"></script>
+  <script src="/js/contact.js"></script>
 
 </body>
 </html>
