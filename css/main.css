@@ -6,6 +6,116 @@
     
 }
 
+/* index information*/
+#general-container {
+    margin: 5px;
+}
+
+#main-container {
+    margin: 10px;
+}
+
+#home-info {
+    display: flex;
+    background-color: #e8e8e8;
+    justify-content: space-between;
+}
+
+
+#general-info {
+    padding: 30px 10px 0 10px;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+#car-img {
+    margin-bottom: 10px;
+}
+
+
+
+.social-media-links {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 25px;
+}
+
+.container-info {
+    margin: 10px 20px;
+    align-items: center;
+    /* display: block; */
+    justify-content: center;
+    font-weight: 400;
+    max-width: 100%;
+    text-size-adjust: 100%;
+    display: block;
+    flex-basis: auto;
+    box-sizing: border-box;
+}
+
+#car-img img {
+    transition: all .8s ease-in-out 0s;
+}
+
+ img:hover {
+    cursor: default;
+    transform: rotateY(180deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.home-btn {
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    color: rgba(79, 97, 42, 0.9);
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.home-btn:hover {
+    transform: scale(1.1,1.1);
+    box-shadow: 0px 2px 6px rgb(3, 54, 18);
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+    background-color: #725811;
+    color: white;
+}
+
+.info {
+    font-weight: 600;
+    font-size: 25px;
+    background-image:linear-gradient(to right,#416c48ff,#ffb900);
+    color: transparent;
+    transition: all 1s;
+    text-transform:uppercase;
+}
+
+.info:hover {
+    transform:skewY(2deg) skewX(15deg);
+    text-shadow:.5rem  2rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+#car-img img:hover {
+    transform: rotateY(-180deg);
+}
+
+#car-img img {
+    transition: all .8s ease-in-out;
+}
+
+
+
+
+
+
 .navigation{
     background-color: rgb(239, 241, 243);
 }
@@ -138,6 +248,11 @@ aside.sideBar{
         display: inline-block;
         position: relative;
         right: 0;
+    }
+
+    /* TO DISPLAY CAR IMAGE  */
+    #home-info {
+        display: block;
     }
 }
 
