@@ -8,23 +8,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/shop.css">
 
     <title>Cars</title>
 </head>
 <body>
     <header class="navigation">
         <nav class="navBar">
-            <a href="index.html"><img src="/images/logo1.png" alt="companylogo"></a>
-              
-
-            <div class="navLinks">
-                <a href="/index.html">Home</a>
-                <a href="#">Gallery</a>
-                <a href="#">About Us</a>
-                <a href="/contact.html">Contact Us</a>
+            <img src="/images/logo1.png" alt="CompanyLogo">
+    
+    
+            <div id="links" onclick="openblk()" class="navLinks">
+    
+                <div class="navLinks">
+    
+                    <a href="/index.html">Home</a>
+                    <a href="/gallery.html">Gallery</a>
+                    <a href="#">About us</a>
+                    <a href="/contact.html">Contact us</a>
+                </div>
+                <i id="hamburger" class="fa-solid fa-bars"> 
+                <div class="ham1"></div>
+                
+                <div class="ham2"></div>    
+                
+                <div class="ham3"></div>    
+                
+                </i>
             </div>
         </nav>
     </header>
+    <aside id="sidelinks" class="sideBar">
+        <div id="cancel" class="cancel">
+            <img onclick="closeblk()" src="/images/Close Square.png" class="fasss" alt="">
+        </div>
+        <div class="side-menu">
+            <a href="/index.html">Home</a>
+            <a href="/gallery.html">Gallery</a>
+            <a href="#">About us</a>
+            <a href="/contact.html">Contact us</a>
+        </div>
+    </aside>
 
     <main class="container-fluid">
 
@@ -36,8 +60,8 @@
             </div>
         </header>
 
-        <section class="container-fluid main"  id="cars-wrapper">
-            <div class="plan col-12 col-sm-3">
+        <section class="container-fluid main col-sm-3"  id="cars-wrapper">
+            <div class="plan col-md-6 col-sm-3">
                 <div class="plan__side plan__side--front">
                     <div class="plan__image plan__image--1">
                         <img src="images/black-mustang.png" class="img-fluid" />
@@ -67,5 +91,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js" ></script>
     <script src="js/index.js" ></script>  
+    <script src="/js/nav.js"></script>
 </body>
 </html>

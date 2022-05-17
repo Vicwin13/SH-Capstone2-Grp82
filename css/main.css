@@ -7,9 +7,7 @@
 }
 
 /* index information*/
-#general-container {
-    margin: 5px;
-}
+
 
 #main-container {
     margin: 10px;
@@ -19,6 +17,8 @@
     display: flex;
     background-color: #e8e8e8;
     justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 10px;
 }
 
 
@@ -139,13 +139,42 @@ div.navLinks a {
     padding-right: 10px;
     color: black;
     cursor: pointer;
+    
 }
+
+div.navLinks a:hover{
+    color: rgb(11, 168, 11);
+    font-weight: bolder;
+}
+
 #hamburger {
     position: absolute;
-    
+    right: 150px;
+    top: 30px;
+    width: 30px;
     display: none;
-    max-width: 100%;
+   
     
+}
+
+#hamburger .ham2{
+    
+    height: 5px;
+    
+    background-color: rgb(30, 31, 7);
+}
+#hamburger .ham1{
+    
+    height: 5px;
+    
+    background-color: rgb(231, 24, 24);
+    
+  
+}
+#hamburger .ham3{
+    background-color: rgb(3, 168, 11);
+    height: 5px;
+
 }
 section.motto{
 
@@ -179,6 +208,9 @@ section.motto img{
     text-align: center;
     padding-top: 20px;
 }
+.wrap p{
+    font-family: script;
+}
 
 aside.sideBar{
     min-height: 100vh;
@@ -186,8 +218,10 @@ aside.sideBar{
     width: 300px;
     background-image: linear-gradient(to bottom,  rgb(134, 224, 179), rgb(101, 128, 101));
     top: 0;
-    display: none;
+    /* display: none; */
     right: 0;
+    transform: translateX(400px);
+    z-index: 10;
 }
 .side-menu{
     display: flex;
@@ -203,10 +237,11 @@ aside.sideBar{
 
 
 #sidelinks.toggle{
-   display: inline-block;
+   /* display: inline-block; */
+   transform: translateX(0px);
 }
 #sidelinks.hide{
-    transform: translateX(300px);
+    transform: translateX(400px);
     transition: 100ms;
 }
 
@@ -231,24 +266,24 @@ aside.sideBar{
   
 }
 
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 640px){
     
     
     .navigation .navBar img{
         margin-left: 0;
+        
     
     }
-    .navBar{
-        display: block;
-    }
-    .navLinks{
+  
+    .navLinks a{
         display: none;
     }
     #hamburger{
-        display: inline-block;
-        position: relative;
-        right: 0;
+        display: block;
+        position: absolute;
+        right: 110px;
     }
+  
 
     /* TO DISPLAY CAR IMAGE  */
     #home-info {
@@ -291,7 +326,7 @@ aside.sideBar{
     font-style: italic;
 }
 
-h1, h2 {
+h1 , h2 {
     font-size:3rem;
     text-transform:uppercase;
     font-weight:700;

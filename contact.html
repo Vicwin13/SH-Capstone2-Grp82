@@ -15,21 +15,42 @@
 </head>
 
 <body>
-  <body>
-    <header class="navigation">
-        <nav class="navBar">
-            <img src="/images/logo1.png" alt="CompanyLogo">
+  <header class="navigation">
+    <nav class="navBar">
+        <img src="/images/logo1.png" alt="CompanyLogo">
 
-          <div  class="navLinks">
-              <a href="/index.html">Home</a>
-              <a href="/gallery.html">Gallery</a>
-              <a href="#">About us</a>
-              <a href="/contact.html">Contact us</a>
+
+        <div id="links" onclick="openblk()" class="navLinks">
+
+            <div class="navLinks">
+
+                <a href="/index.html">Home</a>
+                <a href="/gallery.html">Gallery</a>
+                <a href="#">About us</a>
+                <a href="/contact.html">Contact us</a>
+            </div>
+            <i id="hamburger" class="fa-solid fa-bars"> 
+            <div class="ham1"></div>
+            
+            <div class="ham2"></div>    
+            
+            <div class="ham3"></div>    
+            
+            </i>
         </div>
-        <i id="hamburger" onclick=openblk() class="fa-solid fa-bars"></i>
-        </nav>
-
-    </header>
+    </nav>
+</header>
+<aside id="sidelinks" class="sideBar">
+  <div id="cancel" class="cancel">
+      <img onclick="closeblk()" src="/images/Close Square.png" class="fasss" alt="">
+  </div>
+  <div class="side-menu">
+      <a href="#">Home</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="#">About us</a>
+      <a href="/contact.html">Contact us</a>
+  </div>
+</aside>
 
 <div class="body" style="margin: 30px auto;  width: fit-content; padding: 15px; outline: 2px solid rgb(211, 211, 192); border-radius: 20px;">
  
@@ -56,25 +77,22 @@
   <div class="form-group">
       <label for="inputPassword5" class="form-label ">Password</label>
     <div class="d-flex justify-content-start gap-2">  <input type="password" placeholder= "" id="Password" class="form-control" aria-describedby="passwordHelpBlock">
-      <i class="bi bi-eye-slash"></i>
-      <div id="passwordHelp" class="form-text"></div>
+      <i id="slash1"class="bi bi-eye-slash"></i>
+      
 
     </div>
-  </div>
-      <div id="passwordHelpBlock" class="form-text">
-       Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-      </div>
    
   <div class="form-group">
       <label for="inputConfirm password5" class="form-label">Confirm password</label>
       <div class="d-flex justify-content-start gap-2">  <input type="password" id="Password2" class="form-control" aria-describedby="passwordHelpBlock">
     <div id="passwordHelpBlock" class="form-text">
-      <i class="bi bi-eye-slash"></i> </div>
-      <div id="password2Help" class="form-text"></div>
+      <i id="slash2"  class="bi bi-eye-slash slashes"></i> </div>
+  
 
     </div>
+    <div id="passwordHelp" class="form-text"></div>
   
-    <div class="form-check ">
+    <div class="form-check " style="margin-top: 10px;">
       <input type="radio" class="form-check-input" name="customRadio" id="customRadio1">
       <label class="form-check-label" for="customRadio1">Male</label>
   </div>
@@ -83,8 +101,9 @@
       <label class="form-check-label" for="customRadio2">Female</label>
   </div>
   
-   <div onclick="return checkPassword()">Click me</div>
-  <button style="padding: 5px 10px 5px 10px; background-color: white; color: black; transform: none; box-shadow: none; " id="submit" onclick="return validateForm()" type="submit" class="btn btn-primary">Submit</button>
+   
+  <button style=" margin-top: 10px; padding: 5px 10px 5px 10px; background-color: white; color: black; transform: none; box-shadow: none; "
+   id="submit" onkeyup="" onclick=" validateForm(), checkPassword()" type="submit" class="btn btn-primary">Submit</button>
   <div id="submitHelp"></div>
 
   </form>

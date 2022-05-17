@@ -1,11 +1,8 @@
-let form =document.getElementById('main-form');
 let submit = document.getElementById('submit');
 
 let nameError = document.getElementById('UsernameHelp');
 let emailError = document.getElementById('emailHelp');
 let numberErr = document.getElementById('numberHelp');
-let passwordErr = document.getElementById('passwordHelp');
-let password2Err = document.getElementById('password2Help');
 let submitErr = document.getElementById('submitHelp');
 
 
@@ -21,7 +18,10 @@ if(!username.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
     nameError.innerHTML = 'Write your full name';
     return false;
 }
-nameError.innerHTML= 'valid';
+nameError.innerHTML= '<i class="bi bi-hand-thumbs-up-fill"></i>';
+nameError.style.color ='green';
+nameError.style.focus()
+
 return true;
 
 }
@@ -44,7 +44,7 @@ if (!number.match(/^[0-9]{11}$/)){
     return false;
 }
     numberErr.innerHTML ='<i class="bi bi-hand-thumbs-up-fill"></i>'
-    numberErr.style.color ='seagreen'
+    numberErr.style.color ='green';
     return true;
 }
 
@@ -62,27 +62,74 @@ function validateEmail(){
     }
    
     emailError.innerHTML = '<i class="bi bi-hand-thumbs-up-fill"></i>';
+    emailError.style.color ='green';
+    
     return true;
 }
 
+function checkPassword(){
+    let password = document.getElementById('Password').value;
+    
+    let password2 = document.getElementById('Password2').value;
+    
+    console.log(password, password2)
+    
+    let passwordErr = document.getElementById('passwordHelp');
+    
+    if (password.length != 0){
+        if (password == password2){
+            passwordErr.textContent = 'Password match';
+            passwordErr.style.color = 'green';
+        }
+       
+        else{
+            passwordErr.textContent = `Password don't match`;
+            passwordErr.style.color ='red';
+        }
+    }
+    
+    }
+
+
+
 function validateForm(){
-    if (!validateName() || !validatePhone() || !validateEmail()){
+    if (!validateName() || !validatePhone() || !validateEmail() || checkPassword()){
         submitErr.innerHTML= 'Please input correct details'
-        setTimeout(function(){submitErr.style.display='none';}, 2000)
+        setTimeout(function(){submitErr.style.display='none';}, 20000);
         submitErr.style.color = 'red'
         submitErr.style.fontSize= '16px'
         submitErr.style.fontWeight = 'bolder'
+        
+        submitErr.focus();
 
         return false;
     }
 }
 
-function checkPassword(){
-let password = document.getElementById('Password').value;
-
-let password2 = document.getElementById('Password2').value;
-
-console.log(password, password2)
 
 
-}
+
+let eyes2= document.getElementById('slash2');
+
+ eyes2.addEventListener('click', () => {
+let password2 = document.getElementById('Password2');
+
+        let type=password2.getAttribute('type')==='password' ? 'text': 'password'
+        password2.setAttribute('type', type);
+    
+       password2.classList.toggle("slashes");
+    
+    });
+
+
+    let eyes1 =document.getElementById('slash1');
+    eyes1.addEventListener('click', () => {
+let password = document.getElementById('Password');
+        
+        
+                let type=password.getAttribute('type')==='password' ? 'text': 'password'
+                password.setAttribute('type', type);
+            
+               password.classList.toggle("slash");
+            
+            });

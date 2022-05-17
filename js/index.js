@@ -68,7 +68,7 @@ cars.forEach(e => {
 </div>
     `
 
-    carsSection.innerHTML = html
+    carsSection.innerHTML = html;
 });
 
 
