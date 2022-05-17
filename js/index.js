@@ -70,3 +70,12 @@ cars.forEach(e => {
 
     carsSection.innerHTML = html
 });
+
+
+let galleryButton = document.getElementById("gallerey-btn");
+galleryButton.addEventListener('click', changePage)
+
+function changePage() {
+    location.href="/gallery.html"
+}
+
